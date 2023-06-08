@@ -798,7 +798,13 @@ left: 20px;
         flex: 0 0 100%;
         max-width: 100%;
     }
+
 }
+ @Media (max-width:400){
+    #phone-btn{
+        display: flex;
+    }
+ }
 /* .project{
     display: flex;
     justify-content: center;
