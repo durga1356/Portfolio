@@ -693,7 +693,7 @@ left: 20px;
     display: inline-block;
 }
 
-.contact .contact-info-item .fa-envelope,.fa-whatsapp-square ,.fa-solid, .fa-brands, .insta{
+.contact .contact-info-item .fa-envelope,.fa-whatsapp-square ,.fa-solid, .fa-brands, .fa-instagram-square{
     font-size: 25px;
     color: var(--skin-color);
 }
