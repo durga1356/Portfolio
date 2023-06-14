@@ -1,41 +1,13 @@
-/**
- * Owl Carousel v2.2.1
- * Copyright 2013-2017 David Deutsch
- * Licensed under  ()
- */
-/**
- * Owl carousel
- * @version 2.1.6
- * @author Bartosz Wojciechowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- * @todo Lazy Load Icon
- * @todo prevent animationend bubling
- * @todo itemsScaleUp
- * @todo Test Zepto
- * @todo stagePadding calculate wrong active classes
- */
+
 ;(function($, window, document, undefined) {
 
-	/**
-	 * Creates a carousel.
-	 * @class The Owl Carousel.
-	 * @public
-	 * @param {HTMLElement|jQuery} element - The element to create the carousel for.
-	 * @param {Object} [options] - The options
-	 */
+	
 	function Owl(element, options) {
 
-		/**
-		 * Current settings for the carousel.
-		 * @public
-		 */
+		
 		this.settings = null;
 
-		/**
-		 * Current options set by the caller including defaults.
-		 * @public
-		 */
+		
 		this.options = $.extend({}, Owl.Defaults, options);
 
 		/**
@@ -56,10 +28,7 @@
 		 */
 		this._plugins = {};
 
-		/**
-		 * Currently suppressed events to prevent them from beeing retriggered.
-		 * @protected
-		 */
+		s
 		this._supress = {};
 
 		/**
@@ -105,11 +74,7 @@
 		 */
 		this._clones = [];
 
-		/**
-		 * Merge values of all items.
-		 * @todo Maybe this could be part of a plugin.
-		 * @protected
-		 */
+		
 		this._mergers = [];
 
 		/**
@@ -179,10 +144,6 @@
 		this.initialize();
 	}
 
-	/**
-	 * Default options for the carousel.
-	 * @public
-	 */
 	Owl.Defaults = {
 		items: 3,
 		loop: false,
@@ -495,12 +456,7 @@
 		this.trigger('initialized');
 	};
 
-	/**
-	 * Setups the current settings.
-	 * @todo Remove responsive classes. Why should adaptive designs be brought into IE8?
-	 * @todo Support for media queries by using `matchMedia` would be nice.
-	 * @public
-	 */
+	
 	Owl.prototype.setup = function() {
 		var viewport = this.viewport(),
 			overwrites = this.options.responsive,
@@ -698,8 +654,7 @@
 
 	/**
 	 * Handles `touchstart` and `mousedown` events.
-	 * @todo Horizontal swipe threshold as option
-	 * @todo #261
+	
 	 * @protected
 	 * @param {Event} event - The event arguments.
 	 */
