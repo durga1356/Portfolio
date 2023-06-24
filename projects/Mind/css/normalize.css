@@ -31,14 +31,23 @@ section {
   display: block;
 }
 
-
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
 
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+/* Grouping content
+   ========================================================================== */
 
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
 
 figcaption,
 figure,
@@ -117,6 +126,10 @@ strong {
   font-weight: bolder;
 }
 
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 code,
 kbd,
@@ -125,12 +138,17 @@ samp {
   font-size: 1em; /* 2 */
 }
 
-
+/**
+ * Add the correct font style in Android 4.3-.
+ */
 
 dfn {
   font-style: italic;
 }
 
+/**
+ * Add the correct background and color in IE 9-.
+ */
 
 mark {
   background-color: #ff0;
@@ -145,7 +163,10 @@ small {
   font-size: 80%;
 }
 
-
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 
 sub,
 sup {
@@ -163,6 +184,12 @@ sup {
   top: -0.5em;
 }
 
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
 
 audio,
 video {

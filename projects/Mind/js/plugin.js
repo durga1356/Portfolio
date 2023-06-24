@@ -3,7 +3,32 @@
 !function(){function e(){}for(var n,o=["assert","clear","count","debug","dir","dirxml","error","exception","group","groupCollapsed","groupEnd","info","log","markTimeline","profile","profileEnd","table","time","timeEnd","timeline","timelineEnd","timeStamp","trace","warn"],i=o.length,r=window.console=window.console||{};i--;)r[n=o[i]]||(r[n]=e)}();
 
 
-
+/*!
+* jQuery meanMenu v2.0.8
+* @Copyright (C) 2012-2014 Chris Wharton @ MeanThemes (https://github.com/meanthemes/meanMenu)
+*
+*/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT
+* HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED,
+* INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR
+* FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE
+* OR DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY PATENTS,
+* COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.COPYRIGHT HOLDERS WILL NOT
+* BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL
+* DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENTATION.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://gnu.org/licenses/>.
+*
+* Find more information at http://www.meanthemes.com/plugins/meanmenu/
+*
+*/
 
 !function(n){"use strict";n.fn.meanmenu=function(P){var e={meanMenuTarget:jQuery(this),meanMenuContainer:".menu-area",meanMenuClose:"X",meanMenuCloseSize:"25px",meanMenuOpen:"<span /><span /><span />",meanRevealPosition:"",meanRevealPositionDistance:"0",meanRevealColour:"",meanScreenWidth:"767",meanNavPush:"",meanShowChildren:!0,meanExpandableChildren:!0,meanExpand:"+",meanContract:"-",meanRemoveAttrs:!1,onePage:!1,meanDisplay:"block",removeElements:""};P=n.extend(e,P);var W=window.innerWidth||document.documentElement.clientWidth;return this.each(function(){var a=P.meanMenuTarget,t=P.meanMenuContainer,r=P.meanMenuClose,i=P.meanMenuCloseSize,u=P.meanMenuOpen,n=P.meanRevealPosition,e=P.meanRevealPositionDistance,m=P.meanRevealColour,s=P.meanScreenWidth,l=P.meanNavPush,o=".meanmenu-reveal",c=P.meanShowChildren,h=P.meanExpandableChildren,v=P.meanExpand,d=P.meanContract,y=P.meanRemoveAttrs,j=P.onePage,Q=P.meanDisplay,f=P.removeElements,g=!1;(navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/Blackberry/i)||navigator.userAgent.match(/Windows Phone/i))&&(g=!0),(navigator.userAgent.match(/MSIE 8/i)||navigator.userAgent.match(/MSIE 7/i))&&jQuery("html").css("overflow-y","scroll");function p(){var e;"center"===n&&(e=(window.innerWidth||document.documentElement.clientWidth)/2-22+"px",C="left:"+e+";right:auto;",g?jQuery(".meanmenu-reveal").animate({left:e}):jQuery(".meanmenu-reveal").css("left",e))}var C="",w=!1,x=!1;"right"===n&&(C="right:"+e+";left:auto;"),"left"===n&&(C="left:"+e+";right:auto;"),p();function A(){jQuery(".mean-bar,.mean-push").remove(),jQuery(t).removeClass("mean-container"),jQuery(a).css("display",Q),x=w=!1,jQuery(f).removeClass("mean-remove")}function E(){var e,n="background:"+m+";color:"+m+";"+C;W<=s?(jQuery(f).addClass("mean-remove"),x=!0,jQuery(t).addClass("mean-container"),jQuery(".mean-container").prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="'+n+'">Show Navigation</a><nav class="mean-nav"></nav></div>'),e=jQuery(a).html(),jQuery(".mean-nav").html(e),y&&jQuery("nav.mean-nav ul, nav.mean-nav ul *").each(function(){jQuery(this).is(".mean-remove")?jQuery(this).attr("class","mean-remove"):jQuery(this).removeAttr("class"),jQuery(this).removeAttr("id")}),jQuery(a).before('<div class="mean-push" />'),jQuery(".mean-push").css("margin-top",l),jQuery(a).hide(),jQuery(".meanmenu-reveal").show(),jQuery(o).html(u),M=jQuery(o),jQuery(".mean-nav ul").hide(),c?h?(jQuery(".mean-nav ul ul").each(function(){jQuery(this).children().length&&jQuery(this,"li:first").parent().append('<a class="mean-expand" href="#" style="font-size: '+i+'">'+v+"</a>")}),jQuery(".mean-expand").on("click",function(e){e.preventDefault(),jQuery(this).hasClass("mean-clicked")?(jQuery(this).text(v),jQuery(this).prev("ul").slideUp(300,function(){})):(jQuery(this).text(d),jQuery(this).prev("ul").slideDown(300,function(){})),jQuery(this).toggleClass("mean-clicked")})):jQuery(".mean-nav ul ul").show():jQuery(".mean-nav ul ul").hide(),jQuery(".mean-nav ul li").last().addClass("mean-last"),M.removeClass("meanclose"),jQuery(M).click(function(e){e.preventDefault(),w=!1===w?(M.css("text-align","center"),M.css("text-indent","0"),M.css("font-size",i),jQuery(".mean-nav ul:first").slideDown(),!0):(jQuery(".mean-nav ul:first").slideUp(),!1),M.toggleClass("meanclose"),jQuery(M).is(".meanmenu-reveal.meanclose")?M.html(r):M.html(u),jQuery(f).addClass("mean-remove")}),j&&jQuery(".mean-nav ul > li > a:first-child").on("click",function(){jQuery(".mean-nav ul:first").slideUp(),w=!1,jQuery(M).toggleClass("meanclose").html(u)})):A()}var M="";g||jQuery(window).resize(function(){W=window.innerWidth||document.documentElement.clientWidth,A(),W<=s?(E(),p()):A()}),jQuery(window).resize(function(){W=window.innerWidth||document.documentElement.clientWidth,g?(p(),W<=s?!1===x&&E():A()):(A(),W<=s&&(E(),p()))}),E()})}}(jQuery);
 
